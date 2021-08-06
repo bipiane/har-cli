@@ -11,6 +11,8 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "csv-writer": "^1.6.0",
+    "file-system": "^2.2.2",
     "tslib": "^1"
   },
   "devDependencies": {
@@ -26,6 +28,7 @@
     "globby": "^10",
     "mocha": "^5",
     "nyc": "^14",
+    "prettier": "^2.3.2",
     "ts-node": "^8",
     "typescript": "^3.3"
   },
@@ -57,7 +60,8 @@
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "prettier": "prettier --config ./.prettierrc --write \"src/**/*{.ts,.js,.json,.css,.scss,.html}\" \"*.json\" "
   },
   "types": "lib/index.d.ts"
 }

@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "commands": {
+    "har": {
+      "id": "har",
+      "description": "Export a CSV file from a HAR file",
+      "pluginName": "har-cli",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {
+        "help": {"name": "help", "type": "boolean", "char": "h", "description": "show CLI help", "allowNo": false},
+        "output": {"name": "output", "type": "option", "char": "o", "description": "output file"},
+        "force": {"name": "force", "type": "boolean", "char": "f", "allowNo": false}
+      },
+      "args": [{"name": "file"}]
+    }
+  }
+}

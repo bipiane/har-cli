@@ -29,28 +29,24 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`har-cli hello [FILE]`](#har-cli-hello-file)
+* [`har-cli har [FILE]`](#har-cli-har-file)
 * [`har-cli help [COMMAND]`](#har-cli-help-command)
 
-## `har-cli hello [FILE]`
+## `har-cli har [FILE]`
 
-describe the command here
+Export a CSV file from a HAR file
 
 ```
 USAGE
-  $ har-cli hello [FILE]
+  $ har-cli har [FILE]
 
 OPTIONS
   -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ har-cli hello
-  hello world from ./src/hello.ts!
+  -h, --help           show CLI help
+  -o, --output=output  output file
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/bipiane/har-cli/blob/v0.0.1/src/commands/hello.ts)_
+_See code: [src/commands/har.ts](https://github.com/bipiane/har-cli/blob/v0.0.1/src/commands/har.ts)_
 
 ## `har-cli help [COMMAND]`
 
