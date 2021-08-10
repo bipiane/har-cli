@@ -9,8 +9,13 @@
       "aliases": [],
       "flags": {
         "help": {"name": "help", "type": "boolean", "char": "h", "description": "show CLI help", "allowNo": false},
-        "output": {"name": "output", "type": "option", "char": "o", "description": "output file"},
-        "force": {"name": "force", "type": "boolean", "char": "f", "allowNo": false}
+        "output": {
+          "name": "output",
+          "type": "option",
+          "char": "o",
+          "description": "output file",
+          "default": "export.scv"
+        }
       },
       "args": [{"name": "file"}]
     }

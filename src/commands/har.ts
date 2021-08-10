@@ -13,15 +13,16 @@ export interface HarData {
   };
 }
 
+/**
+ * ./bin/run har ~/local23.com.har
+ */
 export default class Har extends Command {
   static description = 'Export a CSV file from a HAR file';
 
   static flags = {
     help: flags.help({char: 'h'}),
     // flag with a value (-o, --output=VALUE)
-    output: flags.string({char: 'o', description: 'output file'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    output: flags.string({char: 'o', description: 'output file', default: 'export.scv'}),
   };
 
   async loadHAR(filename: string): Promise<HarData> {
@@ -49,6 +50,7 @@ export default class Har extends Command {
             time: Math.round(e.time * 100) / 100,
             share: '',
             url: e.request.url,
+            data: e,
           };
         })
         .sort((a: {time: number}, b: {time: number}) => (a.time > b.time ? -1 : 1));

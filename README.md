@@ -41,9 +41,8 @@ USAGE
   $ har-cli har [FILE]
 
 OPTIONS
-  -f, --force
   -h, --help           show CLI help
-  -o, --output=output  output file
+  -o, --output=output  [default: export.scv] output file
 ```
 
 _See code: [src/commands/har.ts](https://github.com/bipiane/har-cli/blob/v0.0.1/src/commands/har.ts)_
